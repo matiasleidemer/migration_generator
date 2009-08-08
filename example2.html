@@ -1,0 +1,167 @@
+<tbody><tr>
+			<th>Campo</th>
+			<th>PK</th>
+			<th>FK</th>
+			<th>Unique</th>
+			<th>Tipo</th>
+
+			<th>Tam</th>
+			<th>Nullable</th>
+			<th>Default</th>
+			<th>Descrição</th>
+		</tr>
+		<tr>
+			<td> <strong>id</strong> </td>
+
+			<td style="text-align: center;">***</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">***</td>
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+
+			<td style="text-align: center;">-</td>
+			<td> Identificador da Tabela </td>
+		</tr>
+		<tr>
+			<td> <strong>courtyard_movement_id</strong> </td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;"><em>courtyard_movements</em></td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+
+			<td> Identifica a movimentação de entrada no pátio </td>
+		</tr>
+		<tr>
+			<td> <strong>type</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">string</td>
+			<td style="text-align: center;">20</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+			<td> Tipo de movimentação ["VehicleInMovement", "VehicleOutMovement"]. </td>
+
+		</tr>
+		<tr>
+			<td> <strong>vehicle_id</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;"><em>vehicles</em></td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+			<td> Relação com o veículo envolvido na movimentação. </td>
+		</tr>
+
+		<tr>
+			<td> <strong>date</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">datetime</td>
+
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+			<td> Data e hora em que ocorreu a movimentação. </td>
+		</tr>
+		<tr>
+			<td> <strong>weight</strong> </td>
+
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">decimal</td>
+			<td style="text-align: center;">15.4</td>
+			<td>False</td>
+
+			<td style="text-align: center;">0.00</td>
+			<td> Peso. </td>
+		</tr>
+		<tr>
+			<td> <strong>weight_measure_id</strong> </td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;"><em>measures</em></td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+
+			<td> Unidade de medida para o Peso. </td>
+		</tr>
+		<tr>
+			<td> <strong>driver_id</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;"><em>registers</em></td>
+
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+			<td> Determina o motorista da movimentação. </td>
+
+		</tr>
+		<tr>
+			<td> <strong>entry_id</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;"><em>vehicle_movements</em></td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;">integer</td>
+			<td>&nbsp;</td>
+			<td>True</td>
+			<td style="text-align: center;">-</td>
+			<td> Associa a movimentação de saída a uma de entrada. Se um veículo entrou, teoricamente ele deverá sair. </td>
+		</tr>
+
+		<tr>
+			<td> <strong>user_id</strong> </td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;"><em>registers</em></td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">integer</td>
+
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+			<td> Usuário que fez a última alteração no registro. </td>
+		</tr>
+		<tr>
+			<td> <strong>created_at</strong> </td>
+
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">datetime</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+
+			<td style="text-align: center;">-</td>
+			<td> Data de criação do registro. </td>
+		</tr>
+		<tr>
+			<td> <strong>updated_at</strong> </td>
+			<td style="text-align: center;">-</td>
+
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">datetime</td>
+			<td>&nbsp;</td>
+			<td>False</td>
+			<td style="text-align: center;">-</td>
+
+			<td> Data de atualização do registro. </td>
+		</tr>
+	</tbody>

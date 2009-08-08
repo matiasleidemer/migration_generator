@@ -1,4 +1,4 @@
-A simple web generator for migrations.
+A simple Sinatra(hpricot) web generator for migrations.
 
 You put the html code of the table description and the system returns the migration for that HTML.
 

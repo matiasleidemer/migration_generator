@@ -1,0 +1,117 @@
+<table>
+	<tbody><tr>
+		<th>Campo</th>
+		<th>PK</th>
+		<th>FK</th>
+		<th>Unique</th>
+
+		<th>Tipo</th>
+		<th>Tam</th>
+		<th>Nullable</th>
+		<th>Default</th>
+		<th>Descrição</th>
+	</tr>
+
+	<tr>
+		<td> <strong>id</strong> </td>
+		<td style="text-align: center;">***</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">***</td>
+		<td style="text-align: center;">integer</td>
+
+		<td>&nbsp;</td>
+		<td>False</td>
+		<td style="text-align: center;">-</td>
+		<td> Identificador da Tabela </td>
+	</tr>
+	<tr>
+		<td> <strong>container_id</strong> </td>
+
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;"><em>container_id</em></td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">integer</td>
+		<td>20</td>
+		<td>False</td>
+
+		<td style="text-align: center;">-</td>
+		<td> Relaciona a movimentação com o container. Normalização: o mesmo container é cadastrado somente uma única vez. </td>
+	</tr>
+	<tr>
+		<td> <strong>maritime_company_id</strong> </td>
+		<td style="text-align: center;">-</td>
+
+		<td style="text-align: center;"><em>registers</em></td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">integer</td>
+		<td>&nbsp;</td>
+		<td>True</td>
+		<td style="text-align: center;">-</td>
+
+		<td> Identifica a comanhia marítima. </td>
+	</tr>
+	<tr>
+		<td> <strong>entry_movement_id</strong> </td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;"><em>vehicle_movements</em></td>
+
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">integer</td>
+		<td>&nbsp;</td>
+		<td>False</td>
+		<td style="text-align: center;">-</td>
+		<td> Associa a entrada do container com a entrada do veículo que o trouxo. A partir dessa associação sabe-se qual a movimentação; dia e horário em que ocorreou; quem foi o motorista; qual o veículo. </td>
+
+	</tr>
+	<tr>
+		<td> <strong>exit_movement_id</strong> </td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;"><em>vehicle_movements</em></td>
+		<td style="text-align: center;">-</td>
+
+		<td style="text-align: center;">integer</td>
+		<td>&nbsp;</td>
+		<td>True</td>
+		<td style="text-align: center;">-</td>
+		<td> Associa a saída do container com a saída do veículo que está levando o container. A partir dessa associação sabe-se qual a movimentação; dia e horário em que ocorreou; quem foi o motorista; qual o veículo. </td>
+	</tr>
+
+	<tr>
+		<td> <strong>user_id</strong> </td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;"><em>registers</em></td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">integer</td>
+
+		<td>&nbsp;</td>
+		<td>False</td>
+		<td style="text-align: center;">-</td>
+		<td> Usuário que fez a última alteração no registro. </td>
+	</tr>
+	<tr>
+		<td> <strong>created_at</strong> </td>
+
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">datetime</td>
+		<td>&nbsp;</td>
+		<td>False</td>
+
+		<td style="text-align: center;">-</td>
+		<td> Data de criação do registro. </td>
+	</tr>
+	<tr>
+		<td> <strong>updated_at</strong> </td>
+		<td style="text-align: center;">-</td>
+
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">datetime</td>
+		<td>&nbsp;</td>
+		<td>False</td>
+		<td style="text-align: center;">-</td>
+
+		<td> Data de atualização do registro. </td>
+	</tr>
+</tbody></table>
